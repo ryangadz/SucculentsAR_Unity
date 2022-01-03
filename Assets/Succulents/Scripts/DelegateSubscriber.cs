@@ -11,6 +11,7 @@ public class DelegateSubscriber : MonoBehaviour, IExample
     // Start is called before the first frame update
     void Start()
     {
+        SizeMultiplier = 1; 
         renderMaterial = GetComponent<MeshRenderer>().material; 
       //  transform = GetComponent<Transform>();          
         // single cast delegates

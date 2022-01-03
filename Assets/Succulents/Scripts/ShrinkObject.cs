@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ShrinkObject : MonoBehaviour, IExample
 {
+    void Start()
+    {
+        SizeMultiplier = 1; 
+    }
     public float SizeMultiplier
     {
         get;
