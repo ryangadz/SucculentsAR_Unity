@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class DelegateSubscriber : MonoBehaviour
+public class DelegateSubscriber : MonoBehaviour, IExample
 {
-    private Material renderMaterial; 
+    private Material renderMaterial;
+
   //  public Transform transform; 
     // Start is called before the first frame update
     void Start()
@@ -39,5 +40,18 @@ public class DelegateSubscriber : MonoBehaviour
            // unsubscribing delegates
            DelegateExample.ONChangeProperty -= UpdateColor;
            DelegateExample.ONChangeProperty -= UpdatePosition;
+    }
+
+    // interface stuff
+    public float SizeMultiplier
+    {
+        get;
+        private set; 
+    }
+
+    public void Shrink(float amount)
+    {
+
+        transform.localScale *= amount;  
     }
 }
